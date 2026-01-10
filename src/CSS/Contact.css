@@ -1,0 +1,12 @@
+.contact {
+  display: grid;
+}
+
+.contact > h1 {
+  color: white;
+  text-align: center;
+  height: 6vh;
+  width: auto;
+  margin-top: 200px;
+  border-bottom: 1px solid orangered;
+}
