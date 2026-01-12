@@ -32,7 +32,7 @@ export default class Portfolio extends Component {
                     <div className='border rounded-sm grid grid-cols-12 mt-2 bg-white hover:shadow-lg hover:scale-105 ease-in-out duration-300'>
                       <img src={`${item.imgurl}`} alt={item.name} className="col-span-12 mx-auto md:col-span-4 item-img w-full md:w-[300px] h-[150px] object-auto"/>
                       <p className='text-sm text-justify p-2 col-span-12 md:col-span-8'>{item.description}</p>
-                      <a className="text-center p-4 bg-cyan-600 text-white hover:bg-cyan-800 hover:text-black col-span-12" target="_blank" href={`${item.projectImg}`}>View Project</a>
+                      <a className="text-center p-4 bg-cyan-600 text-white hover:bg-cyan-800 active:bg-cyan-900 hover:text-black col-span-12" target="_blank" href={`${item.projectImg}`}>View Project</a>
                     </div>
                   </div>
                 )
