@@ -22,11 +22,11 @@ export default class Footer extends Component {
       <footer>
         <div className="grid grid-rows-1 relative">
           <div className="mt-4">
-            <ul className="flex justify-center space-x-6 py-4">
+            <ul className="flex justify-center space-x-8 py-4">
               {
                 resumeData.socialLinks.map(item => {
                   return (
-                    <li key={item.name}>
+                    <li className='' key={item.name}>
                       {item.className === "LinkedInIcon" ? (
                         <a href={item.url} target="_blank" rel="noreferrer"><LinkedInIcon /></a>
                       ) : null}
@@ -44,10 +44,9 @@ export default class Footer extends Component {
             </ul>
 
           </div>
-          <div id="go-top" className="absolute -top-3 left-[47%] rotate-180">
+          <div id="go-top" className="absolute -top-4 right-[10%] rotate-180">
             {/* <a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open" /></a> */}
-            <a className="" href="#home"><ExpandCircleDownIcon fontSize='large' color='#7F00FF' className='animate-bounce' /></a>
-
+            <a className="" href="#home"><ExpandCircleDownIcon fontSize='large' className='animate-bounce text-cyan-50'/></a>
           </div>
         </div>
       </footer>

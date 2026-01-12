@@ -21,7 +21,18 @@ code {
   background-size: cover;
   overflow: hidden;
   text-align: center;
-  min-height: 100vh;
+  min-height: 95vh;
+  color: white;
+}
+
+.headerItems:hover {
+  background-color: oklch(39.8% 0.07 227.392);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.headerItems:active {
+  background-color: #474cff;
   color: white;
 }
 

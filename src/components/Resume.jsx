@@ -66,7 +66,7 @@ export default class Resume extends Component {
         
         <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
           <div className="col-span-3 text-center pb-5">
-            <span className="font-bold text-2xl border-b-4 border-blue-500">Work</span>
+            <span className="font-bold text-2xl border-b-4 border-cyan-700">Work</span>
           </div>
 
           <div className="col-span-9">
@@ -101,7 +101,7 @@ export default class Resume extends Component {
 
         <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
           <div className="col-span-3 text-center pb-5">
-            <span className="font-bold text-2xl border-b-4 border-blue-500">Education</span> 
+            <span className="font-bold text-2xl border-b-4 border-cyan-700">Education</span> 
           </div>
 
           <div className="col-span-9">
@@ -130,7 +130,7 @@ export default class Resume extends Component {
 
         <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
           <div className="col-span-3 text-center pb-5">
-            <span className="font-bold text-2xl border-b-4 border-blue-500">Skills</span>
+            <span className="font-bold text-2xl border-b-4 border-cyan-700">Skills</span>
           </div>
 
           <div className="col-span-9">

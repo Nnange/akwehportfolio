@@ -38,7 +38,7 @@ export default class About extends Component {
                   <h2 className='text-xl font-bold'>Contact Details</h2>
                   <p className="space-y-2">
                      <span className="location">
-                        <LocationOnOutlinedIcon />{resumeData.address}
+                        <LocationOnOutlinedIcon className="text-cyan-700" />{resumeData.address}
                      </span>
                      {/* <span>{resumeData.website}</span> */}
                   </p>
