@@ -46,7 +46,7 @@ export default class Footer extends Component {
           </div>
           <div id="go-top" className="absolute -top-3 left-[47%] rotate-180">
             {/* <a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open" /></a> */}
-            <a className="scroll-smooth" href="#home"><ExpandCircleDownIcon fontSize='large' color='#7F00FF' className='animate-bounce' /></a>
+            <a className="" href="#home"><ExpandCircleDownIcon fontSize='large' color='#7F00FF' className='animate-bounce' /></a>
 
           </div>
         </div>
