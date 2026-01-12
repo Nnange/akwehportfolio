@@ -184,20 +184,20 @@ const resumeData = {
       name: "Amazon-Clone",
       description:
         "This is a fully functional commercial app with also the payment functionality fully enabled. The back-end was done with firebase and Redux, the frontend with React, HTML, and CSS. Stripe helped in processing payments. The link below takes you to the project.",
-      imgurl:"https://www.iihglobal.com/wp-content/uploads/2019/09/Amazon-Clone.jpg",
+      imgurl:"../src/assets/amazon.jpg",
       projectImg: "https://nnange.github.io/Amazon-Clone/",
+    },
+    {
+      name: "TaskFlow - Task Management Application",
+      description: "TaskFlow is a secure full-stack to-do application built with Spring Boot, React (TypeScript), and PostgreSQL. It features JWT authentication, email verification, and user-isolated data access using Spring Security. The frontend is built with React + Vite, includes protected routes, and handles automatic logout on token expiration. The app is Dockerized, served via Nginx, and deployed through a Jenkins CI/CD pipeline with environment-based configuration.",
+      imgurl: "../src/assets/taskflow.png",
+      projectImg: "https://taskflow.awongnnange.com/",
     },
     {
       name: "WhatsApp-Clone",
       description: "This is a demo or clone of whatsapp. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
-      imgurl: "https://repository-images.githubusercontent.com/377881498/918f0300-d3a7-11eb-8600-1063361aaeb7",
+      imgurl: "../src/assets/waclone.png",
       projectImg: "https://nnange.github.io/WhatsApp-Clones/",
-    },
-    {
-      name: "Spotify-Clone",
-      description: "This is the Spotify-clone. This build was a tricky one but it has a display of the weekly discovering playlist. The react context API (Redux) came in handy together with Spotify API. A Spotify account will be needed for Login and also accompanied by user authentication.",
-      imgurl: "https://importanceofspotifyclone.weebly.com/uploads/4/6/9/2/46920489/8679033.jpg?459",
-      projectImg: "https://nnange.github.io/spotify-clone/",
     },
     {
       name: "Netflix-Clone",
@@ -205,12 +205,7 @@ const resumeData = {
       imgurl: "https://merehead.com/blog/wp-content/uploads/Netflix.jpg",
       projectImg: "https://nnange.github.io/netflix-clone/",
     },
-    {
-      name: "New Project",
-      description: "mobileapp",
-      imgurl: "",
-      projectImg: "",
-    },
+    
   ],
   testimonials: [
     {

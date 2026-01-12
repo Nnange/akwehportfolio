@@ -64,8 +64,8 @@ export default class Resume extends Component {
     return (
       <section id="resume" className="bg-white text-gray-800 py-20">
         
-        <div className="grid grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
-          <div className="col-span-3">
+        <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
+          <div className="col-span-3 text-center pb-5">
             <span className="font-bold text-2xl border-b-4 border-blue-500">Work</span>
           </div>
 
@@ -99,8 +99,8 @@ export default class Resume extends Component {
 
         <hr className="my-6 border border-gray-400" />
 
-        <div className="grid grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
-          <div className="col-span-3">
+        <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
+          <div className="col-span-3 text-center pb-5">
             <span className="font-bold text-2xl border-b-4 border-blue-500">Education</span> 
           </div>
 
@@ -128,11 +128,9 @@ export default class Resume extends Component {
 
         <hr className="my-6 border border-gray-400" />
 
-        <div className="grid grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
-          <div className="col-span-3">
-            <h1>
-              <span className="font-bold text-2xl border-b-4 border-blue-500">Skills</span>
-            </h1>
+        <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
+          <div className="col-span-3 text-center pb-5">
+            <span className="font-bold text-2xl border-b-4 border-blue-500">Skills</span>
           </div>
 
           <div className="col-span-9">
