@@ -6,8 +6,6 @@ import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 import resumeData from "./resumeData";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Contact from "./components/Contact";
-
 
 class App extends Component {
   render() {

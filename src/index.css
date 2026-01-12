@@ -16,10 +16,6 @@ code {
     monospace;
 }
 
-.nav {
-  /* background-color: rgb(15, 31, 46) */
-}
-
 #home {
   background: #161415 url("../src/assets/header-background.jpg") no-repeat center center;
   background-size: cover;
@@ -28,11 +24,6 @@ code {
   min-height: 100vh;
   color: white;
 }
-
-#about {
-
-}
-
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -51,11 +42,7 @@ code {
 
 a {
   font-weight: 500;
-  /* color: #646cff; */
   text-decoration: inherit;
-}
-a:hover {
-  /* color: #535bf2; */
 }
 
 h1 {

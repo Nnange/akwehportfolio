@@ -40,7 +40,7 @@ export default class About extends Component {
                      <span className="location">
                         <LocationOnOutlinedIcon />{resumeData.address}
                      </span>
-                     <span>{resumeData.website}</span>
+                     {/* <span>{resumeData.website}</span> */}
                   </p>
                </div>
             </div>
