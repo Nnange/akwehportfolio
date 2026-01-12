@@ -201,7 +201,7 @@ const resumeData = {
     },
     {
       name: "Netflix-Clone",
-      description: "",
+      description: "This is a demo or clone of netflix. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
       imgurl: "https://merehead.com/blog/wp-content/uploads/Netflix.jpg",
       projectImg: "https://nnange.github.io/netflix-clone/",
     },

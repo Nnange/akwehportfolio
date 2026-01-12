@@ -70,9 +70,9 @@ export default class Resume extends Component {
           </div>
 
           <div className="col-span-9">
-            { resumeData.work.map((item, i) => {
+            { resumeData.work.map((item) => {
                 return (
-                  <div className="" key={i}>
+                  <div className="" key={`${item.CompanyName}-${item.MonthOfLeaving}`}>
                     <div className="">
                       <span className="font-bold text-3xl">{item.specialization}</span>
                       <p className="text-lg mb-2">
@@ -105,9 +105,9 @@ export default class Resume extends Component {
           </div>
 
           <div className="col-span-9">
-            { resumeData.education.map((item, i) => {
+            { resumeData.education.map((item) => {
                 return (
-                  <div className="row item" key={i}>
+                  <div className="row item" key={`${item.UniversityName}-${item.YearOfPassing}`}>
                     <div className="twelve columns">
                       <span className="font-bold text-3xl">{item.UniversityName}</span>
                       <p className="text-md mb-2">
