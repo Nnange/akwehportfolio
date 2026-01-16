@@ -17,7 +17,7 @@ code {
 }
 
 #home {
-  background: #161415 url("../src/assets/header-background.jpg") no-repeat center center;
+  background: #161415 url("/assets/header-background.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
   text-align: center;
