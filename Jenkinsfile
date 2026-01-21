@@ -19,7 +19,23 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f akwehportfolio || true
-                    docker run -d -p 3000:80 --name akwehportfolio akwehportfolio:latest --restart unless-stopped
+
+                    # Remove old dangling image (optional, keeps things clean)
+                    docker rmi akwehportfolio:previous || true
+
+                    # Tag the new image as 'previous' for rollback if needed (optional)
+                    docker tag akwehportfolio:latest akwehportfolio:previous || true
+
+                    # Run new container with proper flags
+                    docker run -d \
+                        -p 3000:80 \
+                        --name akwehportfolio \
+                        --restart unless-stopped \
+                        akwehportfolio:latest
+                    
+                    # Wait a bit and check if container is running
+                    sleep 10
+                    docker ps | grep akwehportfolio || exit 1
                 '''
             }
         }
