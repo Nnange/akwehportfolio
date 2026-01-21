@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     docker rm -f akwehportfolio || true
-                    docker run -d -p 3000:80 --name akwehportfolio akwehportfolio:latest
+                    docker run -d -p 3000:80 --name akwehportfolio akwehportfolio:latest --restart unless-stopped
                 '''
             }
         }
