@@ -31,7 +31,7 @@ export default class Header extends Component {
             <li className="current"><a className=" border-b p-2 rounded headerItems" href="#home">Home</a></li>
             <li><a className=" border-b p-2 rounded headerItems" href="#about">About</a></li>
             <li><a className=" border-b p-2 rounded headerItems" href="#resume">Resume</a></li>
-            <li><a className=" border-b p-2 rounded headerItems" href="#portfolio">Works</a></li>
+            {/* <li><a className=" border-b p-2 rounded headerItems" href="#portfolio">Works</a></li> */}
             {/* <li><a className="" href="#testimonials">Testimonials</a></li> */}
             {/* <li><a className="" href="#contact">Contact</a></li> */}
           </ul>
@@ -40,7 +40,7 @@ export default class Header extends Component {
 
           <div className="mt-[8%]">
             <div className="banner-text">
-              <p className="responsive-headline font-bold text-[5.7rem]">I am {resumeData.name}</p>
+              <p className="responsive-headline font-bold text-[3rem] sm:text-[5.7rem]">I am {resumeData.name}</p>
               <p className="text-white font-sans w-1/2 mx-auto leading-9 ">
                 I am a {resumeData.role}.{resumeData.roleDescription}
               </p>

@@ -83,12 +83,14 @@ export default class Resume extends Component {
                           – {this.DisplayMonthYear(item.YearOfLeaving)} • {this.getDuration(item.MonthOfLeaving, item.YearOfLeaving)}
                         </em>
                       </p>
-                      <i className="">
-                        { item.Tasks.map((i) => {
-                            return <span key={i} className="leading-7"> {i} <br /> </span>
-                          }) 
-                        }
-                      </i>
+                      <div className="text-justify">
+                        <i className="">
+                          { item.Tasks.map((i) => {
+                              return <span key={i} className="leading-7"> {i} <br /> </span>
+                            }) 
+                          }
+                        </i>
+                      </div>
                     </div>
                     <hr className="my-6 border border-gray-400" />
                   </div>
