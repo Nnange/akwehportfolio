@@ -31,7 +31,7 @@ export default class Header extends Component {
             <li className="current"><a className=" border-b p-2 rounded headerItems" href="#home">Home</a></li>
             <li><a className=" border-b p-2 rounded headerItems" href="#about">About</a></li>
             <li><a className=" border-b p-2 rounded headerItems" href="#resume">Resume</a></li>
-            {/* <li><a className=" border-b p-2 rounded headerItems" href="#portfolio">Works</a></li> */}
+            <li><a className=" border-b p-2 rounded headerItems" href="#portfolio">Works</a></li>
             {/* <li><a className="" href="#testimonials">Testimonials</a></li> */}
             {/* <li><a className="" href="#contact">Contact</a></li> */}
           </ul>
