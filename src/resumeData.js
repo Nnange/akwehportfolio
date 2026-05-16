@@ -180,31 +180,38 @@ const resumeData = {
     },
   ],
   portfolio: [
-    {
-      name: "Amazon-Clone",
-      description:
-        "This is a fully functional commercial app with also the payment functionality fully enabled. The back-end was done with firebase and Redux, the frontend with React, HTML, and CSS. Stripe helped in processing payments. The link below takes you to the project.",
-      imgurl:"/assets/amazon.jpg",
-      projectImg: "https://nnange.github.io/Amazon-Clone/",
-    },
+    
     {
       name: "TaskFlow - Task Management Application",
-      description: "TaskFlow is a secure full-stack to-do application built with Spring Boot, React (TypeScript), and PostgreSQL. It features JWT authentication, email verification, and user-isolated data access using Spring Security. The frontend is built with React + Vite, includes protected routes, and handles automatic logout on token expiration. The app is Dockerized, served via Nginx, and deployed through a Jenkins CI/CD pipeline with environment-based configuration.",
+      description: "TaskFlow is a secure full-stack task management app built with Spring Boot 4, React 19 (TypeScript), and PostgreSQL. It features JWT authentication, email verification with a 24-hour token, forgot/reset password via email, and user-isolated todo data enforced by Spring Security. The React frontend uses Redux Toolkit, protected routes, and auto-logout on token expiration. The app is Dockerized, served via Nginx, and deployed through a Jenkins CI/CD pipeline with multi-environment configuration.",
       imgurl: "/assets/taskflow.png",
       projectImg: "https://taskflow.awongnnange.com/",
     },
     {
-      name: "WhatsApp-Clone",
-      description: "This is a demo or clone of whatsapp. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
-      imgurl: "/assets/waclone.png",
-      projectImg: "https://nnange.github.io/WhatsApp-Clones/",
+      name: "RosterLoop - Household Cleaning Roster App",
+      description: "RosterLoop is a full-stack web application that automatically generates and displays fair rotating cleaning schedules for shared households. Built with Spring Boot 4, Java 21, and PostgreSQL on the backend, and Next.js 16, React 19, and TypeScript on the frontend. It features JWT authentication, round-robin schedule generation, a monthly calendar view, and household management with ownership-based access control. The app is Dockerized and deployed via a Jenkins CI/CD pipeline.",
+      imgurl: "/assets/rosterLoop.png",
+      projectImg: "https://rosterloop.awongnnange.com/",
     },
-    {
-      name: "Netflix-Clone",
-      description: "This is a demo or clone of netflix. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
-      imgurl: "https://merehead.com/blog/wp-content/uploads/Netflix.jpg",
-      projectImg: "https://nnange.github.io/netflix-clone/",
-    },
+    // {
+    //   name: "Amazon-Clone",
+    //   description:
+    //     "This is a fully functional commercial app with also the payment functionality fully enabled. The back-end was done with firebase and Redux, the frontend with React, HTML, and CSS. Stripe helped in processing payments. The link below takes you to the project.",
+    //   imgurl:"/assets/amazon.jpg",
+    //   projectImg: "https://nnange.github.io/Amazon-Clone/",
+    // },
+    // {
+    //   name: "WhatsApp-Clone",
+    //   description: "This is a demo or clone of whatsapp. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
+    //   imgurl: "/assets/waclone.png",
+    //   projectImg: "https://nnange.github.io/WhatsApp-Clones/",
+    // },
+    // {
+    //   name: "Netflix-Clone",
+    //   description: "This is a demo or clone of netflix. It requires a google account for login and user authentication. The back end of this build was done with firebase but the hosting with github. Also, the react context API (Redux) was very helpful in accomplishing this app.",
+    //   imgurl: "https://merehead.com/blog/wp-content/uploads/Netflix.jpg",
+    //   projectImg: "https://nnange.github.io/netflix-clone/",
+    // },
     
   ],
   testimonials: [

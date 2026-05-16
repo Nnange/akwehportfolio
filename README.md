@@ -1,16 +1,66 @@
-# React + Vite
+# Nnange Awong — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React and Vite, showcasing projects, work experience, skills, and education. Deployed via Docker and a Jenkins CI/CD pipeline.
 
-Currently, two official plugins are available:
+Live site: [awongnnange.com](https://www.awongnnange.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **Frontend:** React 19, Vite 7, Tailwind CSS 4, MUI 7, React Router 7
+- **Deployment:** Docker (multi-stage), Nginx, Jenkins CI/CD
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
 
-## Expanding the ESLint configuration
+- **About** — Background, education, and personal introduction
+- **Resume** — Work experience and education timeline
+- **Portfolio** — Featured projects (Amazon Clone, TaskFlow, WhatsApp Clone, Netflix Clone)
+- **Contact** — Social links and contact form
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Docker
+
+```bash
+# Build image
+docker build -t akwehportfolio:latest .
+
+# Run container (serves on port 3000)
+docker run -d -p 3000:80 --name akwehportfolio --restart unless-stopped akwehportfolio:latest
+```
+
+The Dockerfile uses a multi-stage build: Node 22 compiles the Vite app, and the output is served with Nginx Alpine.
+
+## CI/CD
+
+The `Jenkinsfile` defines a three-stage pipeline:
+
+1. **Checkout** — pulls source from SCM
+2. **Build** — runs `npm install && npm run build` then builds the Docker image
+3. **Deploy** — stops the old container, tags the previous image for rollback, and starts a fresh container on port 3000
+
+## Project Structure
+
+```
+src/
+├── components/     # Header, About, Resume, Portfolio, Contact, Footer, Testimonials
+├── CSS/            # Component-scoped stylesheets
+├── resumeData.js   # All portfolio content (bio, experience, projects, skills)
+├── firebase.jsx    # Firebase configuration
+└── main.jsx        # App entry point
+```
+
+All portfolio content is centralized in [src/resumeData.js](src/resumeData.js) — edit that file to update bio, work history, projects, or skills without touching component logic.
