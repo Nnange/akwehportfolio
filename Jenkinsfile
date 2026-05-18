@@ -8,9 +8,21 @@ pipeline {
             }
         }
         
+        stage('Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'npm test -- --run'
+            }
+        }
+
         stage('Build') {
             steps {
-                sh ' npm install && npm run build'
+                sh 'npm run build'
                 sh 'docker build -t akwehportfolio:latest .'
             }
         }
