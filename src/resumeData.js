@@ -75,13 +75,14 @@ const resumeData = {
       MonthOfLeaving: "May, 2023",
       YearOfLeaving: "Present",
       Tasks: [
-      "• Developed and maintained scalable web applications using Angular, Svelte kit, and Node.js, improving application performance and user engagement.",
+      "• Developed and maintained scalable Frontend web applications using Angular, Sveltekit, and Node.js, improving application performance and user engagement.",
+      "• Designed and implemented RESTful APIs and backend services using Spring Boot, ensuring seamless integration with frontend components and third-party services.",
+      "• Utilized MariaDB and PostgreSQL for database management, optimizing queries and ensuring data integrity across applications.",
       "• Collaborated with senior developers and cross-functional teams, participating in code reviews, and providing constructive feedback, which enhanced the overall code quality.",
-      "• Implemented unit tests and end-to-end tests using Jest and Cypress.",
       "• Managed version control using Git, maintaining a clean and organized codebase, and facilitating smooth collaboration among team members.",
       "• Contributed to the documentation of technical specifications and user guides, aiding in knowledge transfer.",
       "• Participated in Agile ceremonies such as daily stand-ups, sprint planning, and retrospectives, ensuring effective communication and continuous improvement within the team.",
-      "• Working on the Continuous Integration / Continuous Delivery process",
+      "• Working on the Continuous Integration / Continuous Delivery process using Jenkins",
       ]
     },
     {
@@ -110,8 +111,7 @@ const resumeData = {
         "• Set up accounts and workstations",
         "• Working on the Continuous Integration / Continuous Delivery process",
         "• Enhancing our highly accessible platform while using the latest technologies like AWS, Kubernetes, Ansible, Docker",
-        "• Setup and maintaining MacOS/Linux/Windows hardware",
-        "• Managing Microsoft Outlook accounts",
+        "• Issued out and inventory management of Software Licenses and IT equipment",
         "• Proactively identify and address new requirements and potential problems",
       ]
     },
@@ -175,8 +175,12 @@ const resumeData = {
       items: ["Spring Security", "JWT", "REST APIs", "PostgreSQL", "Firebase", "SQL"],
     },
     {
-      category: "DevOps & Tools",
-      items: ["Docker", "Jenkins", "Git", "AWS", "Kubernetes", "Ansible", "Nginx", "Linux"],
+      category: "DevOps & CI/CD",
+      items: ["Docker", "Docker Compose", "Jenkins", "Nginx", "Git", "GitHub Actions"],
+    },
+    {
+      category: "Cloud & Infrastructure",
+      items: ["AWS", "Kubernetes", "Ansible", "Linux", "Home Server", "Reverse Proxy"],
     },
     {
       category: "Testing",
@@ -194,12 +198,14 @@ const resumeData = {
       description: "TaskFlow is a secure full-stack task management app built with Spring Boot 4, React 19 (TypeScript), and PostgreSQL. It features JWT authentication, email verification with a 24-hour token, forgot/reset password via email, and user-isolated todo data enforced by Spring Security. The React frontend uses Redux Toolkit, protected routes, and auto-logout on token expiration. The app is Dockerized, served via Nginx, and deployed through a Jenkins CI/CD pipeline with multi-environment configuration.",
       imgurl: "/assets/taskflow.png",
       projectImg: "https://taskflow.awongnnange.com/",
+      githubUrl: "https://github.com/Nnange/TaskFlow",
     },
     {
       name: "RosterLoop - Household Cleaning Roster App",
       description: "RosterLoop is a full-stack web application that automatically generates and displays fair rotating cleaning schedules for shared households. Built with Spring Boot 4, Java 21, and PostgreSQL on the backend, and Next.js 16, React 19, and TypeScript on the frontend. It features JWT authentication, round-robin schedule generation, a monthly calendar view, and household management with ownership-based access control. The app is Dockerized and deployed via a Jenkins CI/CD pipeline.",
       imgurl: "/assets/rosterLoop.png",
       projectImg: "https://rosterloop.awongnnange.com/",
+      githubUrl: "https://github.com/Nnange/rosterLoop",
     },
     // {
     //   name: "Amazon-Clone",
