@@ -4,7 +4,7 @@ import "../CSS/About.css";
 
 export default function About({ resumeData }) {
   return (
-    <section id="about" className='py-20'>
+    <section id="about" className='py-20 bg-gray-100 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700'>
       <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
         <div className="col-span-4">
           <img className="h-[20rem] w-[20rem] md:hidden rounded-3xl object-contain mx-auto" src="/assets/profilepic.jpg" alt="profilepic" />
@@ -12,16 +12,16 @@ export default function About({ resumeData }) {
         </div>
 
         <div className="col-span-8 p-4">
-          <h2 className='text-xl font-bold'>About Me</h2>
-          <p className='mt-4 leading-9 text-sm text-gray-400 text-justify'>
+          <h2 className='text-xl text-black font-bold dark:text-white'>About Me</h2>
+          <p className='mt-4 leading-9 text-sm text-gray-500 dark:text-gray-400 text-justify'>
             {resumeData.aboutme}
           </p>
 
           <div className="mt-3 flex flex-col space-y-3">
-            <h2 className='text-xl font-bold'>Contact Details</h2>
-            <p className="space-y-2">
-              <span className="location">
-                <LocationOnOutlinedIcon className="text-cyan-700" />{resumeData.address}
+            <h2 className='text-xl text-black font-bold dark:text-white'>Contact Details</h2>
+            <p className="space-y-2 dark:text-gray-300">
+              <span className="location text-black dark:text-gray-300">
+                <LocationOnOutlinedIcon className="text-cyan-700 dark:text-cyan-400" />{resumeData.address}
               </span>
             </p>
           </div>

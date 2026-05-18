@@ -6,16 +6,19 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import FadeIn from "./components/FadeIn";
 import resumeData from "./resumeData";
+import useTheme from "./hooks/useTheme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
+  const { isDark, toggle } = useTheme();
+
   return (
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={
             <>
-              <Header resumeData={resumeData} />
+              <Header resumeData={resumeData} isDark={isDark} toggle={toggle} />
               <FadeIn><About resumeData={resumeData} /></FadeIn>
               <FadeIn><Resume resumeData={resumeData} /></FadeIn>
               <FadeIn><Portfolio resumeData={resumeData} /></FadeIn>

@@ -3,7 +3,7 @@ import { displayMonthYear, getDuration } from '../utils/resumeUtils';
 
 export default function Resume({ resumeData }) {
   return (
-    <section id="resume" className="bg-white text-gray-800 py-20">
+    <section id="resume" className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-20">
 
       <div className="w-3/4 mx-auto flex justify-end pb-4">
         <a
@@ -23,26 +23,26 @@ export default function Resume({ resumeData }) {
           {resumeData.work.map((item) => (
             <div key={`${item.CompanyName}-${item.MonthOfLeaving}`}>
               <span className="font-bold text-3xl">{item.specialization}</span>
-              <p className="text-lg mb-2">
+              <p className="text-lg mb-2 dark:text-gray-300">
                 {item.CompanyName} <span>&bull;</span>{" "}
                 <em className="date">
                   {displayMonthYear(item.MonthOfLeaving)} – {displayMonthYear(item.YearOfLeaving)} &bull; {getDuration(item.MonthOfLeaving, item.YearOfLeaving)}
                 </em>
               </p>
               <div className="text-justify">
-                <i>
+                <i className="dark:text-gray-400">
                   {item.Tasks.map((t) => (
                     <span key={t} className="leading-7">{t}<br /></span>
                   ))}
                 </i>
               </div>
-              <hr className="my-6 border border-gray-400" />
+              <hr className="my-6 border border-gray-200 dark:border-gray-700" />
             </div>
           ))}
         </div>
       </div>
 
-      <hr className="my-6 border border-gray-400" />
+      <hr className="my-6 border border-gray-200 dark:border-gray-700" />
 
       <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
         <div className="col-span-3 text-center pb-5">
@@ -52,20 +52,20 @@ export default function Resume({ resumeData }) {
           {resumeData.education.map((item) => (
             <div key={`${item.UniversityName}-${item.YearOfPassing}`}>
               <span className="font-bold text-3xl">{item.UniversityName}</span>
-              <p className="text-md mb-2">
+              <p className="text-md mb-2 dark:text-gray-300">
                 {item.specialization} <span>&bull;</span>{" "}
                 <em className="date">
                   {item.MonthOfPassing} – {item.YearOfPassing} &bull; {item.duration}
                 </em>
               </p>
-              <span>{item.Achievements}</span>
-              <hr className="my-6 border border-gray-400" />
+              <span className="dark:text-gray-400">{item.Achievements}</span>
+              <hr className="my-6 border border-gray-200 dark:border-gray-700" />
             </div>
           ))}
         </div>
       </div>
 
-      <hr className="my-6 border border-gray-400" />
+      <hr className="my-6 border border-gray-200 dark:border-gray-700" />
 
       <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
         <div className="col-span-3 text-center pb-5">
@@ -75,10 +75,10 @@ export default function Resume({ resumeData }) {
           <div className="flex flex-col space-y-6">
             {resumeData.skills.map((group) => (
               <div key={group.category}>
-                <p className="font-semibold mb-2">{group.category}</p>
+                <p className="font-semibold mb-2 dark:text-gray-200">{group.category}</p>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span key={item} className="px-3 py-1 bg-cyan-50 border border-cyan-200 text-cyan-800 rounded-full text-sm">
+                    <span key={item} className="px-3 py-1 bg-cyan-50 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-700 text-cyan-800 dark:text-cyan-300 rounded-full text-sm">
                       {item}
                     </span>
                   ))}
