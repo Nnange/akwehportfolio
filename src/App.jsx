@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import FadeIn from "./components/FadeIn";
 import resumeData from "./resumeData";
+import CookieBanner from "./components/CookieBanner";
 import useTheme from "./hooks/useTheme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -24,6 +25,7 @@ export default function App() {
               <FadeIn><Portfolio resumeData={resumeData} /></FadeIn>
               <FadeIn><ContactUs resumeData={resumeData} /></FadeIn>
               <Footer resumeData={resumeData} />
+              <CookieBanner />
             </>
           }/>
         </Routes>

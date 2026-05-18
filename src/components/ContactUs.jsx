@@ -10,7 +10,7 @@ const ContactUs = () => {
   const sendMessage = (e) => {
     e.preventDefault();
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    globalThis.location.href = `mailto:nnangeskolosh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    globalThis.location.href = `mailto:awong.nnange@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSent(true);
     setName("");
     setEmail("");
@@ -49,7 +49,7 @@ const ContactUs = () => {
             />
             <button
               type="submit"
-              className="self-end px-8 py-2 rounded-lg bg-cyan-600 text-white text-sm font-medium hover:bg-cyan-800 transition-colors"
+              className="self-end px-8 py-2 rounded-lg bg-cyan-600 text-white text-sm font-medium hover:bg-cyan-800 transition-colors cursor-pointer"
             >
               Send Message
             </button>
