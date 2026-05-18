@@ -4,6 +4,7 @@ import About from "./components/About";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
+import ContactUs from "./components/ContactUs";
 import resumeData from "./resumeData";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -22,7 +23,7 @@ class App extends Component {
                 <About resumeData={resumeData} />
                 <Resume resumeData={resumeData} />
                 <Portfolio resumeData={resumeData} />
-                {/* <ContactUs resumeData={resumeData} /> */}
+                <ContactUs resumeData={resumeData} />
                 <Footer resumeData={resumeData} /> 
               </>
             }/>

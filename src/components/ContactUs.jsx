@@ -1,83 +1,78 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const history = useNavigate();
-
+  const [sent, setSent] = useState(false);
 
   const sendMessage = (e) => {
     e.preventDefault();
-
-    
-    console.log(name, email, subject, message);
-    history("/contact");
-
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
-
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    globalThis.location.href = `mailto:nnangeskolosh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
   };
 
   return (
-    <section id="contact">
-      <div className="row section-head">
-        <div className="ten columns">
-          <h1>Reach Out</h1>
-          <p className="lead">
-            Feel free to contact me for any work or suggestions below
-          </p>
+    <section id="contact" className="py-20 bg-[#ebeeee] text-gray-700">
+      <div className="w-3/4 mx-auto">
+        <div className="mb-10 text-center">
+          <h2 className="font-bold text-2xl">Get In Touch</h2>
+          <p className="mt-2 text-gray-500">Feel free to reach out for work, collaboration, or just a chat.</p>
         </div>
-      </div>
-      <div className="row">
-        <aside className="eleven columns footer-widgets">
-          <div className="widget">
 
-            <form id="contactForm">
+        {sent ? (
+          <p className="text-center text-cyan-700 font-medium">
+            Your email client should have opened — thanks for reaching out!
+          </p>
+        ) : (
+          <form onSubmit={sendMessage} className="max-w-2xl mx-auto flex flex-col gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
-                id="contactName"
                 type="text"
                 placeholder="Your Name"
-                name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
+                className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-cyan-600 bg-white"
               />
               <input
-                id="contactEmail"
-                type="text"
+                type="email"
                 placeholder="Your Email"
-                name="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-cyan-600 bg-white"
               />
-              <input
-                id="contactSubject"
-                type="text"
-                placeholder="Subject"
-                name="subject"
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-
-              />
-              <textarea
-                id="contactMessage" 
-                type="text"
-                value={message}
-                placeholder="Message"   
-                onChange={(e) => setMessage(e.target.value)}
-              />
-              
-              
-              <button type="submit" onClick={sendMessage}>Send Message</button>
-            </form>
-          </div>
-        </aside>
+            </div>
+            <input
+              type="text"
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-cyan-600 bg-white"
+            />
+            <textarea
+              placeholder="Your message..."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+              rows={6}
+              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:border-cyan-600 bg-white resize-none"
+            />
+            <button
+              type="submit"
+              className="self-end px-8 py-2 bg-cyan-700 text-white rounded hover:bg-cyan-800 active:bg-cyan-900 transition-colors font-medium"
+            >
+              Send Message
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );

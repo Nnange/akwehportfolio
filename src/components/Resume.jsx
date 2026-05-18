@@ -69,7 +69,17 @@ export default class Resume extends Component {
   
     return (
       <section id="resume" className="bg-white text-gray-800 py-20">
-        
+
+        <div className="w-3/4 mx-auto flex justify-end pb-4">
+          <a
+            href="/assets/Nnange_Awong_CV.pdf"
+            download
+            className="px-5 py-2 bg-cyan-700 text-white rounded hover:bg-cyan-800 active:bg-cyan-900 text-sm font-medium transition-colors"
+          >
+            Download CV
+          </a>
+        </div>
+
         <div className="md:grid md:grid-cols-12 gap-6 py-7 w-3/4 mx-auto">
           <div className="col-span-3 text-center pb-5">
             <span className="font-bold text-2xl border-b-4 border-cyan-700">Work</span>
