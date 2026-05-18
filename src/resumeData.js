@@ -161,22 +161,30 @@ const resumeData = {
     },
     
   ],
-  skillsDescription: "Your skills here",
   skills: [
     {
-      skillname: "HTML5",
+      category: "Languages & Frameworks",
+      items: ["Java", "Spring Boot", "JavaScript", "TypeScript", "React", "Next.js", "Svelte", "Node.js", "Swift"],
     },
     {
-      skillname: "CSS",
+      category: "Frontend",
+      items: ["HTML5", "CSS3", "Tailwind CSS", "Angular", "Redux"],
     },
     {
-      skillname: "Javascript",
+      category: "Backend & Database",
+      items: ["Spring Security", "JWT", "REST APIs", "PostgreSQL", "Firebase", "SQL"],
     },
     {
-      skillname: "Reactjs",
+      category: "DevOps & Tools",
+      items: ["Docker", "Jenkins", "Git", "AWS", "Kubernetes", "Ansible", "Nginx", "Linux"],
     },
     {
-      skillname: "Java",
+      category: "Testing",
+      items: ["Jest", "Cypress", "Vitest", "JUnit"],
+    },
+    {
+      category: "Languages",
+      items: ["English (Native)", "German (B2)", "French (Fluent)"],
     },
   ],
   portfolio: [

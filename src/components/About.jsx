@@ -39,7 +39,7 @@ export default class About extends Component {
                      <span className="location">
                         <LocationOnOutlinedIcon className="text-cyan-700" />{resumeData.address}
                      </span>
-                     {/* <span>{resumeData.website}</span> */}
+                     {/* <span><a href={resumeData.website} target="_blank" rel="noreferrer" className="text-cyan-700 hover:underline">{resumeData.website}</a></span> */}
                   </p>
                </div>
             </div>

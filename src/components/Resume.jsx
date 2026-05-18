@@ -24,6 +24,12 @@ export default class Resume extends Component {
         duration: PropTypes.string,
       })
     ),
+    skills: PropTypes.arrayOf(
+      PropTypes.shape({
+        category: PropTypes.string,
+        items: PropTypes.arrayOf(PropTypes.string),
+      })
+    ),
     }),
     };
 
@@ -136,16 +142,19 @@ export default class Resume extends Component {
           </div>
 
           <div className="col-span-9">
-            <div className="flex flex-col space-y-4">
-              <ul className="">
-                <strong>Languages:</strong> English (Native), German (B2), French (fluent)
-              </ul>
-              <ul className="">
-                <strong>Programming Languages:</strong> Java, SpringBoot, SQL, JavaScript, Typescript, Svelte, React, Swift
-              </ul>
-              <ul className="">
-                <strong>Hobbies/Interests:</strong> Football, Table tennis, Video Games, Driving, Astrology/Cosmology
-              </ul>
+            <div className="flex flex-col space-y-6">
+              {resumeData.skills.map((group) => (
+                <div key={group.category}>
+                  <p className="font-semibold mb-2">{group.category}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((item) => (
+                      <span key={item} className="px-3 py-1 bg-cyan-50 border border-cyan-200 text-cyan-800 rounded-full text-sm">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
